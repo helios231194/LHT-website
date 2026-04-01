@@ -87,7 +87,7 @@ export function HomeHero() {
 
           <h1
             key={`h1-${current}`}
-            className="text-4xl md:text-5xl lg:text-[4rem] font-black leading-[1.1] text-white mb-6 animate-fadeSlideUp"
+            className="text-4xl md:text-5xl lg:text-[4rem] font-black leading-[1.35] text-white mb-6 animate-fadeSlideUp"
             style={{ animationDelay: '300ms', animationFillMode: 'both' }}
           >
             Một quyết định
