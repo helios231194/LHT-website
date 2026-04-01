@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Trang chủ', href: '/' },
   {
     name: 'Về chúng tôi',
     href: '#',

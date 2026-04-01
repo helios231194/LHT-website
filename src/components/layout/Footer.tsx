@@ -23,6 +23,7 @@ export function Footer() {
               <li><Link href="/linh-hoa-tam" className="text-cyan-azure hover:text-blaze-orange transition-colors">Về Linh Hoa Tâm</Link></li>
               <li><Link href="/kien-thuc" className="text-cyan-azure hover:text-blaze-orange transition-colors">Kiến thức</Link></li>
               <li><Link href="/cong-dong" className="text-cyan-azure hover:text-blaze-orange transition-colors">Cộng đồng Lãnh đạo</Link></li>
+              <li><Link href="#" className="text-cyan-azure hover:text-blaze-orange transition-colors">Đối tác</Link></li>
             </ul>
           </div>
 
