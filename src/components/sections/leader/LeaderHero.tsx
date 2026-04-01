@@ -21,10 +21,10 @@ export function LeaderHero() {
             <div className="w-10 h-px bg-blaze-orange" />
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight">
-            Chiến lược kinh doanh đúng <br className="hidden md:block"/>
-            bắt đầu từ người đứng đầu <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50]">hiểu rõ mình.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.35] tracking-tight">
+            Chiến lược kinh doanh <br className="hidden md:block"/>
+            đúng bắt đầu từ người đứng đầu <br className="hidden lg:block"/>
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50] pb-2">hiểu rõ mình.</span>
           </h1>
           
           <p className="text-xl md:text-2xl font-medium text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
