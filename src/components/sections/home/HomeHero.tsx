@@ -91,7 +91,7 @@ export function HomeHero() {
             style={{ animationDelay: '300ms', animationFillMode: 'both' }}
           >
             Một quyết định
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50] my-2 pb-2">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50] py-2">
               đúng thời điểm
             </span>
             thay đổi cả năm vận hành.
