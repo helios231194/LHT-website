@@ -5,10 +5,12 @@ import { Star } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const PLACEHOLDER = '/images/placeholder-800x800.svg';
+
 const pricingTiers = [
   {
     name: 'GÓI NỀN TẢNG 2026',
-    image: '/images/package-nen-tang-2026.png',
+    image: PLACEHOLDER,
     popular: false,
     ctaTextPrimary: 'ĐẶT LỊCH GÓI NỀN TẢNG',
     ctaLinkPrimary: '#booking',
@@ -17,7 +19,7 @@ const pricingTiers = [
   },
   {
     name: 'GÓI CỐ VẤN CHIẾN LƯỢC 90 NGÀY',
-    image: '/images/package-co-van-90-ngay.png',
+    image: PLACEHOLDER,
     popular: true,
     ctaTextPrimary: 'ĐẶT LỊCH GÓI CỐ VẤN',
     ctaLinkPrimary: '#booking',
@@ -26,7 +28,7 @@ const pricingTiers = [
   },
   {
     name: 'GÓI ĐỘI NGŨ TINH NHUỆ 2026',
-    image: '/images/package-doi-ngu-tinh-nhue.png',
+    image: PLACEHOLDER,
     popular: false,
     ctaTextPrimary: 'ĐẶT LỊCH WORKSHOP ĐỘI NGŨ',
     ctaLinkPrimary: '#booking',
@@ -68,7 +70,7 @@ export function LeaderConsulting() {
                 )}
 
                 {/* Package Image */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <div className="relative w-full aspect-square overflow-hidden">
                   <Image
                     src={tier.image}
                     alt={tier.name}
