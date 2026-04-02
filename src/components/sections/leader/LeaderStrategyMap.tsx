@@ -23,14 +23,14 @@ export function LeaderStrategyMap() {
                 <span className="text-sm font-bold tracking-[0.2em] text-blaze-orange uppercase">Sản phẩm chiến lược</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-[1.15] tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-[1.15] tracking-tight text-balance">
                 Bản đồ Quyết Định <br className="hidden md:block"/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
                   Chiến Lược Lãnh Đạo 2026
                 </span>
               </h2>
 
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
+              <p className="text-lg text-white/80 mb-8 leading-relaxed text-pretty">
                 Tài sản chiến lược được cá nhân hóa hoàn toàn. Dùng làm tài liệu tham chiếu 
                 cốt lõi trong họp chiến lược, tuyển dụng cấp quản lý, quyết định đầu tư và mở chi nhánh.
               </p>

@@ -71,7 +71,7 @@ export function HomeHero() {
       </div>
 
       {/* Content Section - Left */}
-      <div className="relative z-20 container mx-auto px-4 md:px-6 pt-32 pb-24 md:py-0">
+      <div className="relative z-20 container mx-auto px-4 md:px-6 pt-16 pb-20 md:py-0">
         <div className="max-w-2xl lg:max-w-[45%]">
           {/* Tagline badge */}
           <div

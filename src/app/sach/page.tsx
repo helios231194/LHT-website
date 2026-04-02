@@ -7,6 +7,7 @@ import { BookHero } from '@/components/sections/sach/BookHero';
 import { BookContent } from '@/components/sections/sach/BookContent';
 import { BookCombos } from '@/components/sections/sach/BookCombos';
 import { BookDetails } from '@/components/sections/sach/BookDetails';
+import { BookFeedback } from '@/components/sections/sach/BookFeedback';
 
 export const metadata: Metadata = {
   title: 'Sách Sức Mạnh Ẩn Sau Con Số | Linh Hoa Tâm',
@@ -27,6 +28,7 @@ export default function BookPage() {
         <BookHero />
         <BookContent />
         <BookCombos />
+        <BookFeedback />
         <BookDetails />
       </main>
       <Footer />

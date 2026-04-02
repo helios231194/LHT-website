@@ -24,10 +24,10 @@ const topics = [
 
 export function LeaderTopics() {
   return (
-    <section className="py-24 md:py-32 bg-ice-white relative">
+    <section className="py-16 md:py-20 bg-ice-white relative">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <FadeIn direction="up">
-          <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
+          <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-10 h-px bg-blaze-orange" />
               <span className="text-sm font-bold tracking-[0.25em] text-cyan-azure uppercase">Diễn giả chiến lược</span>

@@ -32,7 +32,7 @@ export function RepresentList() {
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <SlideIn direction="up">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-oxford-blue leading-[1.2] mb-6">
+            <h2 className="text-3xl md:text-5xl font-black text-oxford-blue leading-[1.2] mb-6 text-balance">
               Tìm Trưởng Đại Diện <br className="hidden md:block"/>
               <span className="text-blaze-orange">tại địa phương của bạn.</span>
             </h2>
@@ -58,7 +58,7 @@ export function RepresentList() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-oxford-blue text-lg leading-tight mb-2">
+                    <h3 className="font-bold text-oxford-blue text-lg leading-tight mb-2 text-balance">
                       {rep.name}
                     </h3>
                     <div className="flex items-center gap-1.5 text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1 rounded-full w-fit border border-slate-200">
@@ -86,10 +86,10 @@ export function RepresentList() {
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay pointer-events-none" />
             <div className="absolute right-0 top-0 w-64 h-64 bg-cyan-azure/20 rounded-full blur-[80px] pointer-events-none" />
             
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 relative z-10">
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 relative z-10 text-balance">
               Chưa có Trưởng Đại Diện tại khu vực của bạn?
             </h3>
-            <p className="text-white/80 text-lg mb-8 relative z-10">
+            <p className="text-white/80 text-lg mb-8 relative z-10 text-pretty">
               Đây là thời điểm vàng để bạn đăng ký trở thành người đầu tiên dẫn dắt thị trường tại địa phương.
             </p>
             <Link href="#dang-ky" className="relative z-10">

@@ -51,10 +51,10 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <FadeIn direction="up">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-oxford-blue mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-oxford-blue mb-6 text-balance">
               Khách hàng đã luận giải cùng Linh Hoa Tâm chia sẻ.
             </h2>
-            <p className="text-lg text-cyan-azure max-w-3xl mx-auto">
+            <p className="text-lg text-cyan-azure max-w-3xl mx-auto text-pretty">
               Những chia sẻ dưới đây đến từ các lãnh đạo đã làm việc trực tiếp 1:1 và trong workshop chiến lược:
             </p>
           </div>
@@ -87,8 +87,8 @@ export function Testimonials() {
 
                 {/* Quote */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <Quote className={`w-8 h-8 mb-3 transition-colors duration-300 ${hovered === index ? 'text-blaze-orange' : 'text-gray-200'}`} />
-                  <p className="text-oxford-blue/90 text-sm leading-relaxed flex-grow italic">
+                  <Quote className={`hidden md:block w-8 h-8 mb-3 transition-colors duration-300 ${hovered === index ? 'text-blaze-orange' : 'text-gray-200'}`} />
+                  <p className="text-oxford-blue/90 text-sm leading-relaxed flex-grow italic text-pretty">
                     {item.content}
                   </p>
                 </div>

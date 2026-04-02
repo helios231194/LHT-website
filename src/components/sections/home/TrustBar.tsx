@@ -96,22 +96,27 @@ export function TrustBar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-t border-gray-200 pt-12">
           {stats.map((stat, idx) => (
-            <FadeIn key={idx} direction="up" delay={idx * 0.08}>
-              <div className="flex flex-col items-center text-center group">
-                {stat.isText ? (
-                  <div className="text-3xl md:text-4xl font-bold text-oxford-blue mb-1 group-hover:text-blaze-orange transition-colors duration-300">
-                    {stat.raw}
-                  </div>
-                ) : (
-                  <CountUp
-                    target={parseInt(stat.raw)}
-                    suffix={stat.suffix}
-                    duration={1800 + idx * 200}
-                  />
-                )}
-                <div className="text-sm text-cyan-azure leading-snug">{stat.label}</div>
-              </div>
-            </FadeIn>
+            <div 
+              key={idx} 
+              className={idx === stats.length - 1 ? 'col-span-2 md:col-span-1 flex flex-col items-center text-center' : 'flex flex-col items-center text-center'}
+            >
+              <FadeIn direction="up" delay={idx * 0.08}>
+                <div className="flex flex-col items-center text-center group">
+                  {stat.isText ? (
+                    <div className="text-3xl md:text-4xl font-bold text-oxford-blue mb-1 group-hover:text-blaze-orange transition-colors duration-300">
+                      {stat.raw}
+                    </div>
+                  ) : (
+                    <CountUp
+                      target={parseInt(stat.raw)}
+                      suffix={stat.suffix}
+                      duration={1800 + idx * 200}
+                    />
+                  )}
+                  <div className="text-sm text-cyan-azure leading-snug">{stat.label}</div>
+                </div>
+              </FadeIn>
+            </div>
           ))}
         </div>
       </div>

@@ -38,12 +38,12 @@ export function PersonalWorkshopHistory() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row gap-8 justify-between items-end mb-16 md:mb-20">
           <SlideIn direction="right">
-            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight text-balance">
               Workshop <span className="text-cyan-azure">đã diễn ra.</span>
             </h2>
           </SlideIn>
           <SlideIn direction="left">
-            <p className="text-white/60 font-medium max-w-sm text-sm">
+            <p className="text-white/60 font-medium max-w-sm text-sm text-pretty">
               Trực quan các chương trình Workshop chia sẻ về kỹ năng quản lý gia đình, hôn nhân và bản thân được ghi lại.
             </p>
           </SlideIn>
@@ -69,7 +69,7 @@ export function PersonalWorkshopHistory() {
                     <span className="w-1 h-1 rounded-full bg-slate-500" />
                     <span>{ws.type}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white leading-snug group-hover:text-cyan-azure transition-colors">
+                  <h3 className="text-xl font-bold text-white leading-snug group-hover:text-cyan-azure transition-colors text-balance">
                     {ws.title}
                   </h3>
                 </div>

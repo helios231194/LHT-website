@@ -38,13 +38,13 @@ export function KnowledgeFeatured() {
 
               {/* Title */}
               <Link href="/kien-thuc/bai-viet-mau-1">
-                <h2 className="text-3xl md:text-4xl xl:text-5xl font-black text-oxford-blue leading-[1.2] mb-6 hover:text-cyan-azure transition-colors duration-300">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl font-black text-oxford-blue leading-[1.2] mb-6 hover:text-cyan-azure transition-colors duration-300 text-balance">
                   Giải Mã Chu Kỳ 9 Năm: Khi Nào CEO Nên Mở Rộng, Khi Nào Nên Co Cụm?
                 </h2>
               </Link>
 
               {/* Summary */}
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+              <p className="text-slate-600 text-lg leading-relaxed mb-8 text-pretty">
                 Hầu hết các quyết định sai lầm gây thiệt hại hàng tỷ đồng đều đến từ việc mở rộng sai thời điểm. Khám phá cách tính toán chu kỳ từ Thuật Số Học để đưa ra những bước đi chiến lược chuẩn xác nhất cho doanh nghiệp của bạn trong năm 2026.
               </p>
 

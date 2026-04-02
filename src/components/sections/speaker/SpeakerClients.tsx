@@ -16,7 +16,7 @@ export function SpeakerClients() {
     <section className="py-20 bg-white border-b border-slate-100">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="text-center mb-16">
-          <p className="text-sm font-bold tracking-[0.25em] text-slate-400 uppercase mb-4">
+          <p className="text-sm font-bold tracking-[0.25em] text-slate-400 uppercase mb-4 text-balance">
             Đã diễn giả và tham vấn tại
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
@@ -45,7 +45,7 @@ export function SpeakerClients() {
                 
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p className="text-white font-bold leading-snug">
+                  <p className="text-white font-bold leading-snug text-balance">
                     Sự kiện Forbes Women Summit
                   </p>
                   <p className="text-cyan-azure text-sm font-medium mt-1">
