@@ -123,7 +123,7 @@ export function BookCombos() {
                   <Button 
                     variant={combo.btnVariant as any} 
                     className={`w-full h-14 font-bold tracking-wider ${
-                      combo.highlight ? 'shadow-xl shadow-blaze-orange/20' : 'border-2 border-white/20 hover:bg-white hover:text-oxford-blue'
+                      combo.highlight ? 'shadow-xl shadow-blaze-orange/20' : 'border-2 border-white/20 text-white hover:bg-white hover:text-oxford-blue'
                     }`}
                   >
                     {combo.cta}
