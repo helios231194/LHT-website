@@ -119,67 +119,7 @@ export function BookDetails() {
         </div>
       </section>
 
-      {/* SECTION 9: ĐẶT SỐ LƯỢNG LỚN */}
-      <section className="py-20 bg-ice-white relative isolate">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-oxford-blue rounded-3xl p-8 md:p-14 shadow-2xl border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
-            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-cyan-azure/20 rounded-full blur-[100px] pointer-events-none" />
-            
-            <div className="flex-1 relative z-10">
-              <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase text-cyan-azure mb-6 border border-white/10">
-                <Award className="w-4 h-4" /> QUÀ TẶNG DOANH NGHIỆP
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                Tri ân đội ngũ <br/>quản lý nòng cốt.
-              </h2>
-              <p className="text-white/80 leading-relaxed max-w-xl mb-8">
-                Nhiều CEO và Founder chọn <span className="font-bold text-white">Sức Mạnh Ẩn Sau Con Số</span> làm quà tặng tri thức cho đội ngũ quản lý. Mỗi người hiểu về Thuật Số Học sẽ giúp cả nhóm giao tiếp hiệu quả hơn và phân vai chính xác hơn.
-              </p>
-              
-              <ul className="space-y-4 text-white/90 font-medium mb-10 max-w-xl">
-                <li className="flex items-center gap-3"><span className="text-blaze-orange text-lg">■</span> Chiết khấu hấp dẫn cho đơn từ 10 cuốn</li>
-                <li className="flex items-center gap-3"><span className="text-blaze-orange text-lg">■</span> In tên tổ chức hoặc lời chúc lên bìa sách theo yêu cầu</li>
-                <li className="flex items-center gap-3"><span className="text-blaze-orange text-lg">■</span> Giao hàng toàn quốc</li>
-                <li className="flex items-center gap-3"><span className="text-blaze-orange text-lg">■</span> Hỗ trợ workshop giới thiệu nội dung sách cho đội ngũ (nếu cần)</li>
-              </ul>
-            </div>
-            
-            <div className="w-full md:w-[400px] bg-white p-8 rounded-2xl shadow-xl relative z-10 shrink-0 border border-gray-100">
-              <h3 className="text-2xl font-bold text-oxford-blue mb-6 text-center">Liên hệ đặt số lượng</h3>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-center gap-4 bg-ice-white/50 p-4 rounded-xl border border-gray-100">
-                  <div className="w-12 h-12 bg-blaze-orange/10 rounded-full flex items-center justify-center text-blaze-orange shrink-0">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-cyan-azure uppercase tracking-wider">Hotline tư vấn</div>
-                    <div className="text-lg font-black text-oxford-blue">0967.623.456</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 bg-ice-white/50 p-4 rounded-xl border border-gray-100">
-                  <div className="w-12 h-12 bg-oxford-blue/5 rounded-full flex items-center justify-center text-oxford-blue shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-cyan-azure uppercase tracking-wider">Email liên hệ</div>
-                    <div className="text-base font-bold text-oxford-blue">linhhoatam11@gmail.com</div>
-                  </div>
-                </div>
-              </div>
-              
-              <Link href="/lien-he">
-                <Button variant="primary" className="w-full h-14 font-bold shadow-lg text-base">
-                  GỬI YÊU CẦU →
-                </Button>
-              </Link>
-            </div>
-            
-          </div>
-        </div>
-      </section>
+
 
       {/* SECTION 10: CTA CUỐI TRANG */}
       <section className="py-24 bg-blaze-orange relative overflow-hidden text-center text-white">

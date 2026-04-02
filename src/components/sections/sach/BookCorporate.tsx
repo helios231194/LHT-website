@@ -57,36 +57,38 @@ export function BookCorporate() {
                   <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl relative">
                     <h3 className="text-2xl font-black text-oxford-blue text-center mb-8">Liên hệ đặt số lượng</h3>
                     
-                    <div className="space-y-5 mb-10">
-                      {/* Hotline */}
-                      <Link href="tel:0967623456" className="flex items-center bg-slate-50 p-5 rounded-2xl hover:bg-slate-100 transition-colors group">
-                        <div className="w-14 h-14 rounded-full flex items-center justify-center bg-blaze-orange/10 mr-4 group-hover:scale-110 transition-transform shrink-0">
-                          <Phone className="w-6 h-6 text-blaze-orange" />
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-cyan-azure uppercase tracking-wider mb-1">Hotline tư vấn</p>
-                          <p className="text-xl font-black text-oxford-blue tracking-tight">0967.623.456</p>
-                        </div>
-                      </Link>
+                    <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                      <div>
+                        <label htmlFor="fullName" className="block text-sm font-bold text-oxford-blue mb-2">
+                          Họ và tên <span className="text-blaze-orange">*</span>
+                        </label>
+                        <input 
+                          type="text" 
+                          id="fullName" 
+                          placeholder="Nhập họ tên của bạn" 
+                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blaze-orange/50 focus:border-blaze-orange/30 transition-all text-oxford-blue font-medium placeholder:text-slate-400"
+                        />
+                      </div>
+                      
+                      <div className="mb-2">
+                        <label htmlFor="phoneNumber" className="block text-sm font-bold text-oxford-blue mb-2">
+                          Số điện thoại <span className="text-blaze-orange">*</span>
+                        </label>
+                        <input 
+                          type="tel" 
+                          id="phoneNumber" 
+                          placeholder="Nhập số điện thoại liên hệ" 
+                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blaze-orange/50 focus:border-blaze-orange/30 transition-all text-oxford-blue font-medium placeholder:text-slate-400"
+                        />
+                      </div>
 
-                      {/* Email */}
-                      <Link href="mailto:linhhoatam11@gmail.com" className="flex items-center bg-slate-50 p-5 rounded-2xl hover:bg-slate-100 transition-colors group">
-                        <div className="w-14 h-14 rounded-full flex items-center justify-center bg-oxford-blue/5 mr-4 group-hover:scale-110 transition-transform shrink-0">
-                          <Mail className="w-6 h-6 text-oxford-blue" />
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-cyan-azure uppercase tracking-wider mb-1">Email liên hệ</p>
-                          <p className="text-base sm:text-lg font-black text-oxford-blue truncate">linhhoatam11@gmail.com</p>
-                        </div>
-                      </Link>
-                    </div>
-
-                    <Link href="https://zalo.me/0967623456" target="_blank" rel="noopener noreferrer">
-                      <Button variant="primary" className="w-full h-[60px] font-bold text-lg rounded-xl shadow-[0_8px_30px_rgb(255,107,0,0.2)] hover:shadow-[0_8px_30px_rgb(255,107,0,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group">
-                        GỬI YÊU CẦU 
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
-                      </Button>
-                    </Link>
+                      <div className="pt-2">
+                        <Button type="button" variant="primary" className="w-full h-[60px] font-bold text-lg rounded-xl shadow-[0_8px_30px_rgb(255,107,0,0.2)] hover:shadow-[0_8px_30px_rgb(255,107,0,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group">
+                          GỬI YÊU CẦU 
+                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+                        </Button>
+                      </div>
+                    </form>
                   </div>
                </FadeIn>
             </div>
