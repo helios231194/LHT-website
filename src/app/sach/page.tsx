@@ -11,11 +11,11 @@ import { BookFeedback } from '@/components/sections/sach/BookFeedback';
 import { BookCorporate } from '@/components/sections/sach/BookCorporate';
 
 export const metadata: Metadata = {
-  title: 'Sách Sức Mạnh Ẩn Sau Con Số | Linh Hoa Tâm',
-  description: 'Cuốn sách của tác giả Hoàng Mai Linh về Thuật Số Học Ứng Dụng dành cho lãnh đạo doanh nghiệp, cá nhân và bất kỳ ai muốn hiểu rõ mình trước khi ra quyết định.',
+  title: 'Sách Sức Mạnh Ẩn Sau Con Số - Thuật Số Học Ứng Dụng',
+  description: 'Khám phá "Sức Mạnh Ẩn Sau Con Số" của tác giả Hoàng Mai Linh - cuốn sách Thuật Số Học Ứng Dụng hướng dẫn thấu hiểu bản thân, đọc vị nhân sự dành cho Lãnh đạo.',
   openGraph: {
-    title: 'Sách Sức Mạnh Ẩn Sau Con Số | Linh Hoa Tâm',
-    description: 'Sức Mạnh Ẩn Sau Con Số: khi trực giác lãnh đạo có một hệ quy chiếu khoa học.',
+    title: 'Sách Sức Mạnh Ẩn Sau Con Số | Thuật Số Học Ứng Dụng',
+    description: 'Giải mã năng lực lãnh đạo qua Sức Mạnh Ẩn Sau Con Số. Cuốn sách gối đầu giường về Thuật Số Học từ Master Coach Hoàng Mai Linh.',
     locale: 'vi_VN',
     type: 'website',
   },
