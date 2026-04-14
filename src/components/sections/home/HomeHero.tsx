@@ -89,13 +89,13 @@ export function HomeHero() {
             </span>
           </div>
           
-          {/* Headline - Forced to 2 lines */}
+          {/* Headline - Forced to exactly 2 lines */}
           <h1 
-            className="text-[26px] sm:text-[32px] font-black leading-[1.25] text-white w-full tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
-            style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+            className="font-black leading-[1.25] text-white w-full tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
+            style={{ animationDelay: '200ms', animationFillMode: 'both', fontSize: 'clamp(15px, 5.5vw, 28px)' }}
           >
-            Một quyết định <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm whitespace-nowrap">đúng thời điểm</span><br/>
-            thay đổi cả năm vận hành.
+            <span className="block whitespace-nowrap w-full">Một quyết định <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm">đúng thời điểm</span></span>
+            <span className="block whitespace-nowrap w-full">thay đổi cả năm vận hành.</span>
           </h1>
 
           {/* CTA Buttons - Stacked & Rounded */}

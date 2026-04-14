@@ -73,11 +73,10 @@ export function Header() {
   return (
     <>
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-transparent",
-      isScrolled ? "bg-ice-white/95 backdrop-blur-md shadow-sm border-cyan-azure/20 py-2" : "bg-ice-white/80 backdrop-blur-sm py-4"
+      "fixed top-0 inset-x-0 z-[100] transition-colors duration-300",
+      isScrolled ? "bg-ice-white/95 backdrop-blur-md shadow-sm border-b border-cyan-azure/20" : "bg-ice-white/90 backdrop-blur-sm border-b border-transparent"
     )}>
-      <div className="container mx-auto px-4 md:px-6 relative z-[100]">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 h-16 md:h-[72px] relative z-[100] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center z-50 shrink-0">
             <div className="relative h-10 w-40 md:h-12 md:w-48 flex items-center">
@@ -171,7 +170,6 @@ export function Header() {
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-        </div>
       </div>
     </header>
 
