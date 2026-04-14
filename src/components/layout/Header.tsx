@@ -39,6 +39,8 @@ const navLinks = [
   { name: 'Liên hệ', href: '/lien-he' },
 ];
 
+const HEADER_HEIGHT = 64; // px, matches h-16
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,7 +50,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -70,16 +72,42 @@ export function Header() {
     dropdownTimeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
   };
 
+  const closeAll = () => {
+    setMobileMenuOpen(false);
+    setMobileDropdown(null);
+  };
+
   return (
     <>
-    <header className={cn(
-      "fixed top-0 inset-x-0 z-[100] transition-transform duration-300",
-      isScrolled ? "bg-white shadow-md border-b border-cyan-azure/20" : "bg-ice-white/95 border-b border-transparent"
-    )}>
-      <div className="container mx-auto px-4 md:px-6 h-16 md:h-[72px] relative z-[100] flex items-center justify-between">
+      {/* ── HEADER BAR ─────────────────────────────────────── */}
+      <header
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: `${HEADER_HEIGHT}px`,
+          zIndex: 9999,
+          backgroundColor: isScrolled ? '#ffffff' : '#EBEBF1',
+          boxShadow: isScrolled ? '0 1px 8px rgba(0,0,0,0.12)' : 'none',
+          borderBottom: isScrolled ? '1px solid rgba(0,174,239,0.2)' : '1px solid transparent',
+          transition: 'background-color 0.3s, box-shadow 0.3s',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1280px',
+            margin: '0 auto',
+            padding: '0 16px',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
           {/* Logo */}
-          <Link href="/" className="flex items-center z-50 shrink-0">
-            <div className="relative h-10 w-40 md:h-12 md:w-48 flex items-center">
+          <Link href="/" onClick={closeAll} style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+            <div style={{ position: 'relative', width: '160px', height: '40px' }}>
               <Image
                 src="/LOGO-07.png"
                 alt="Linh Hoa Tâm Logo"
@@ -102,23 +130,22 @@ export function Header() {
                 {link.dropdown ? (
                   <button
                     className={cn(
-                      "flex items-center gap-1 text-sm font-medium px-2 xl:px-3 py-2 rounded-lg transition-colors whitespace-nowrap",
+                      'flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-lg transition-colors whitespace-nowrap',
                       activeDropdown === link.name
-                        ? "text-blaze-orange bg-blaze-orange/5"
-                        : "text-dark-blue hover:text-blaze-orange"
+                        ? 'text-blaze-orange bg-blaze-orange/5'
+                        : 'text-dark-blue hover:text-blaze-orange'
                     )}
                     onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
                   >
                     {link.name}
-                    <ChevronDown className={cn(
-                      "w-4 h-4 transition-transform duration-200",
-                      activeDropdown === link.name && "rotate-180"
-                    )} />
+                    <ChevronDown
+                      className={cn('w-4 h-4 transition-transform duration-200', activeDropdown === link.name && 'rotate-180')}
+                    />
                   </button>
                 ) : (
                   <Link
                     href={link.href}
-                    className="text-sm font-medium px-2 xl:px-3 py-2 rounded-lg text-dark-blue hover:text-blaze-orange transition-colors block whitespace-nowrap"
+                    className="text-sm font-medium px-3 py-2 rounded-lg text-dark-blue hover:text-blaze-orange transition-colors block whitespace-nowrap"
                   >
                     {link.name}
                   </Link>
@@ -126,12 +153,14 @@ export function Header() {
 
                 {/* Desktop Dropdown */}
                 {link.dropdown && (
-                  <div className={cn(
-                    "absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200",
-                    activeDropdown === link.name
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-2"
-                  )}>
+                  <div
+                    className={cn(
+                      'absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200',
+                      activeDropdown === link.name
+                        ? 'opacity-100 visible translate-y-0'
+                        : 'opacity-0 invisible -translate-y-2'
+                    )}
+                  >
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[280px]">
                       {link.dropdown.map((item) => (
                         <Link
@@ -153,7 +182,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Sticky CTA Desktop */}
+          {/* Desktop CTA */}
           <div className="hidden xl:block shrink-0">
             <Link href="/giai-phap-lanh-dao">
               <Button variant="primary" size="sm" className="text-sm font-bold whitespace-nowrap">
@@ -162,23 +191,37 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Hamburger */}
           <button
-            className="xl:hidden z-50 text-oxford-blue p-2"
+            style={{ padding: '8px', cursor: 'pointer', background: 'none', border: 'none', color: '#002b57', zIndex: 10001 }}
+            className="xl:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Đóng menu' : 'Mở menu'}
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-      </div>
-    </header>
+        </div>
+      </header>
 
-      {/* Mobile Nav Overlay – outside <header> to avoid backdrop-filter containment bug */}
-      <div className={cn(
-        "fixed inset-0 bg-ice-white z-[90] xl:hidden flex flex-col transition-all duration-300 ease-in-out overflow-y-auto",
-        mobileMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
-      )}>
-        <div className="pt-20 pb-8 px-6 flex flex-col gap-1">
+      {/* ── MOBILE MENU OVERLAY ────────────────────────────── */}
+      {/* Use translateY instead of opacity/visibility to avoid Android render bugs */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: '#EBEBF1',
+          zIndex: 9998,
+          overflowY: 'auto',
+          transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)',
+          transition: 'transform 0.3s ease-in-out',
+          paddingTop: `${HEADER_HEIGHT}px`,
+        }}
+        className="xl:hidden"
+      >
+        <div style={{ padding: '16px 24px 32px' }}>
           {navLinks.map((link) => (
             <div key={link.name}>
               {link.dropdown ? (
@@ -188,24 +231,26 @@ export function Header() {
                     onClick={() => setMobileDropdown(mobileDropdown === link.name ? null : link.name)}
                   >
                     {link.name}
-                    <ChevronDown className={cn(
-                      "w-5 h-5 transition-transform duration-200",
-                      mobileDropdown === link.name && "rotate-180"
-                    )} />
+                    <ChevronDown
+                      className={cn('w-5 h-5 transition-transform duration-200', mobileDropdown === link.name && 'rotate-180')}
+                    />
                   </button>
-                  <div className={cn(
-                    "overflow-hidden transition-all duration-300",
-                    mobileDropdown === link.name ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  )}>
+                  <div
+                    style={{
+                      overflow: 'hidden',
+                      maxHeight: mobileDropdown === link.name ? '500px' : '0',
+                      transition: 'max-height 0.3s ease-in-out',
+                    }}
+                  >
                     <div className="pl-4 pb-2 space-y-1">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block py-2.5 px-4 text-base text-cyan-azure hover:text-blaze-orange transition-colors rounded-lg hover:bg-blaze-orange/5"
-                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-2.5 px-4 rounded-lg hover:bg-blaze-orange/5 transition-colors"
+                          onClick={closeAll}
                         >
-                          <span className="font-medium text-dark-blue">{item.name}</span>
+                          <span className="font-medium text-dark-blue block">{item.name}</span>
                           <span className="block text-sm text-cyan-azure mt-0.5">{item.desc}</span>
                         </Link>
                       ))}
@@ -216,7 +261,7 @@ export function Header() {
                 <Link
                   href={link.href}
                   className="block py-3 px-4 text-lg font-medium text-oxford-blue hover:text-blaze-orange transition-colors rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={closeAll}
                 >
                   {link.name}
                 </Link>
@@ -224,9 +269,9 @@ export function Header() {
             </div>
           ))}
 
-          {/* Mobile Sticky CTA */}
-          <div className="mt-6 px-4">
-            <Link href="/giai-phap-lanh-dao" onClick={() => setMobileMenuOpen(false)}>
+          {/* Mobile CTA */}
+          <div style={{ marginTop: '24px', paddingLeft: '16px', paddingRight: '16px' }}>
+            <Link href="/giai-phap-lanh-dao" onClick={closeAll}>
               <Button variant="primary" size="lg" className="w-full h-14 text-lg font-bold">
                 Tham vấn chiến lược 1:1
               </Button>
