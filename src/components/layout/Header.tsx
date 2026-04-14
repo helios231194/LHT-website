@@ -73,8 +73,8 @@ export function Header() {
   return (
     <>
     <header className={cn(
-      "fixed top-0 inset-x-0 z-[100] transition-colors duration-300",
-      isScrolled ? "bg-ice-white/95 backdrop-blur-md shadow-sm border-b border-cyan-azure/20" : "bg-ice-white/90 backdrop-blur-sm border-b border-transparent"
+      "fixed top-0 inset-x-0 z-[100] transition-transform duration-300",
+      isScrolled ? "bg-white shadow-md border-b border-cyan-azure/20" : "bg-ice-white/95 border-b border-transparent"
     )}>
       <div className="container mx-auto px-4 md:px-6 h-16 md:h-[72px] relative z-[100] flex items-center justify-between">
           {/* Logo */}
