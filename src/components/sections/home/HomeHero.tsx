@@ -76,10 +76,13 @@ export function HomeHero() {
         <div className="absolute inset-x-0 bottom-0 h-[60vh] bg-gradient-to-t from-oxford-blue via-oxford-blue/80 to-transparent pointer-events-none" />
 
         {/* 3. Content Area at the bottom */}
-        <div className="absolute inset-x-0 bottom-0 px-5 pb-10 pt-20 flex flex-col items-center text-center z-30">
+        <div className="absolute inset-x-0 bottom-0 px-5 pb-10 pt-20 flex flex-col items-center text-center z-30 overflow-hidden">
           
           {/* Badge */}
-          <div className="inline-flex items-center justify-center gap-1.5 py-1 px-3 mb-4 bg-white/10 border border-white/20 backdrop-blur-md rounded-full shadow-lg">
+          <div 
+            className="inline-flex items-center justify-center gap-1.5 py-1 px-3 mb-4 bg-white/10 border border-white/20 backdrop-blur-md rounded-full shadow-lg animate-fadeSlideUp"
+            style={{ animationFillMode: 'both' }}
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-blaze-orange animate-pulse" />
             <span className="text-[10px] font-bold tracking-[0.2em] text-white uppercase">
               Leadership
@@ -87,13 +90,19 @@ export function HomeHero() {
           </div>
           
           {/* Headline - Forced to 2 lines */}
-          <h1 className="text-[22px] sm:text-[28px] font-black leading-[1.3] text-white w-full tracking-tight drop-shadow-md mb-6">
+          <h1 
+            className="text-[22px] sm:text-[28px] font-black leading-[1.3] text-white w-full tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
+            style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+          >
             Một quyết định <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm whitespace-nowrap">đúng thời điểm</span><br/>
             thay đổi cả năm vận hành.
           </h1>
 
           {/* CTA Buttons - Stacked & Rounded */}
-          <div className="w-full flex flex-col gap-3">
+          <div 
+            className="w-full flex flex-col gap-3 animate-fadeSlideUp"
+            style={{ animationDelay: '400ms', animationFillMode: 'both' }}
+          >
             <Link href="/giai-phap-lanh-dao" className="w-full">
               <Button variant="primary" size="lg" className="h-[54px] w-full text-[15px] font-black tracking-wide shadow-xl shadow-blaze-orange/30 rounded-full">
                 THAM VẤN CHIẾN LƯỢC 1:1
