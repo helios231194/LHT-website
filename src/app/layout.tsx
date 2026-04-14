@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={poppins.variable}>
-      <body className="font-poppins antialiased bg-ice-white text-dark-blue">
+      <body className="font-poppins antialiased bg-ice-white text-dark-blue overflow-x-hidden w-full">
         {children}
       </body>
     </html>
