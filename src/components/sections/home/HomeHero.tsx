@@ -31,7 +31,7 @@ export function HomeHero() {
   );
 
   return (
-    <section className="relative w-full h-[100dvh] lg:min-h-[100dvh] overflow-hidden bg-[#D3D6DC] lg:bg-transparent text-white group flex flex-col lg:flex-row lg:items-center">
+    <section className="relative w-full h-[calc(100svh-4.5rem)] min-h-[600px] lg:h-[100dvh] lg:min-h-[700px] overflow-hidden bg-oxford-blue lg:bg-transparent text-white group flex flex-col lg:flex-row lg:items-center">
       
       {/* Background Ambience (Desktop Only) */}
       <div className="absolute inset-0 bg-oxford-blue pointer-events-none hidden lg:block" />
@@ -58,7 +58,7 @@ export function HomeHero() {
       </div>
 
       {/* --- MOBILE LAYOUT STRUCTURE --- */}
-      <div className="lg:hidden absolute inset-0 z-10 w-full h-[100dvh]">
+      <div className="lg:hidden absolute inset-0 z-10 w-full h-full">
         
         {/* 1. Full Background Image */}
         <div className="absolute inset-0 w-full h-full">
@@ -73,10 +73,10 @@ export function HomeHero() {
         </div>
 
         {/* 2. Bottom Gradient Overlay for Text Readability */}
-        <div className="absolute inset-x-0 bottom-0 h-[60vh] bg-gradient-to-t from-oxford-blue via-oxford-blue/80 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-oxford-blue via-oxford-blue/90 to-transparent pointer-events-none" />
 
         {/* 3. Content Area at the bottom */}
-        <div className="absolute inset-x-0 bottom-0 px-5 pb-10 pt-20 flex flex-col items-center text-center z-30 overflow-hidden">
+        <div className="absolute inset-x-0 bottom-0 px-5 pb-12 pt-20 flex flex-col items-center text-center z-30 overflow-hidden">
           
           {/* Badge */}
           <div 
@@ -84,14 +84,14 @@ export function HomeHero() {
             style={{ animationFillMode: 'both' }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-blaze-orange animate-pulse" />
-            <span className="text-[10px] font-bold tracking-[0.2em] text-white uppercase">
+            <span className="text-[12px] font-bold tracking-[0.2em] text-white uppercase">
               Leadership
             </span>
           </div>
           
           {/* Headline - Forced to 2 lines */}
           <h1 
-            className="text-[22px] sm:text-[28px] font-black leading-[1.3] text-white w-full tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
+            className="text-[26px] sm:text-[32px] font-black leading-[1.25] text-white w-full tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
           >
             Một quyết định <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm whitespace-nowrap">đúng thời điểm</span><br/>
