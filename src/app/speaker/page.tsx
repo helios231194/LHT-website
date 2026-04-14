@@ -20,7 +20,7 @@ export default function SpeakerPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-[72px] bg-ice-white text-oxford-blue">
+      <main className="min-h-screen pt-16 bg-ice-white text-oxford-blue">
         {/* SECTION 1 - HERO */}
         <SpeakerHero />
         

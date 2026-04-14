@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-[72px] bg-ice-white text-oxford-blue">
+      <main className="min-h-screen pt-16 bg-ice-white text-oxford-blue">
         {/* SECTION 1 & 2 - GIỚI THIỆU & FORM LIÊN HỆ */}
         <ContactForm />
         

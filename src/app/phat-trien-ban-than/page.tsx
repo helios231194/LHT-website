@@ -18,7 +18,7 @@ export default function PhatTrienBanThanPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-24 bg-ice-white text-oxford-blue">
+      <main className="min-h-screen pt-16 bg-ice-white text-oxford-blue">
         {/* SECTION 1 – HERO */}
         <PersonalHero />
         

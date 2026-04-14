@@ -23,7 +23,7 @@ export default function MethodPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main className="pt-16">
         <MethHero />
         <MethOverview />
         <MethIndicators />

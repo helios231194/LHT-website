@@ -83,7 +83,7 @@ Lãnh đạo xuất sắc không chỉ giỏi phân tích thị trường, mà c
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-[72px] bg-ice-white text-oxford-blue pb-24">
+      <main className="min-h-screen pt-16 bg-ice-white text-oxford-blue pb-24">
         
         {/* Breadcrumb & Navigation */}
         <div className="bg-white border-b border-slate-100">

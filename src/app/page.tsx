@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col min-h-screen bg-ice-white pt-20">
+      <main className="flex flex-col min-h-screen bg-ice-white pt-16">
         {/* Section 1 - Hero */}
         <HomeHero />
         

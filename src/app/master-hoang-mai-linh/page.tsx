@@ -16,7 +16,7 @@ export default function MasterPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main className="pt-16">
         <MasterHero />
         <MasterPhilosophy />
         <MasterStats />

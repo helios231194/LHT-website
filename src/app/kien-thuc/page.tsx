@@ -12,7 +12,7 @@ export default function KienThucPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-[72px] bg-ice-white text-oxford-blue">
+      <main className="min-h-screen pt-16 bg-ice-white text-oxford-blue">
         {/* Everything from Section 1 to Section 7 is routed through the Client component for interactive filtering */}
         <KnowledgeClient />
       </main>
