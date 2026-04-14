@@ -36,14 +36,14 @@ export function WorkshopHistory() {
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blaze-orange/10 blur-[150px] pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col md:flex-row gap-8 justify-between items-end mb-16 md:mb-20">
-          <SlideIn direction="right">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-between items-start md:items-end mb-12 md:mb-20 text-center md:text-left">
+          <SlideIn direction="right" className="w-full md:w-auto">
             <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
               Những gì <span className="text-blaze-orange">đã diễn ra.</span>
             </h2>
           </SlideIn>
-          <SlideIn direction="left">
-            <p className="text-white/60 font-medium max-w-sm text-sm">
+          <SlideIn direction="left" className="w-full md:w-auto text-left">
+            <p className="text-white/60 font-medium max-w-sm text-sm mx-auto md:mx-0">
               Hình ảnh và thông tin của các buổi Workshop Chiến Lược gần nhất được dẫn dắt bởi Master Hoàng Mai Linh.
             </p>
           </SlideIn>

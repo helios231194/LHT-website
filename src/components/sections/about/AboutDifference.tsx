@@ -42,7 +42,7 @@ export function AboutDifference() {
         <FadeIn direction="up">
           <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
             <h2 className="text-3xl md:text-5xl font-black text-oxford-blue mb-6 leading-tight">
-              Sự khác biệt của <span className="text-blaze-orange">Linh Hoa Tâm</span>
+              Sự khác biệt của <br className="md:hidden" /><span className="text-blaze-orange">Linh Hoa Tâm</span>
             </h2>
             <div className="w-16 h-1.5 bg-blaze-orange mx-auto rounded-full mb-8" />
             <p className="text-cyan-azure text-lg font-medium max-w-2xl mx-auto">

@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         // Brand Colors
         'oxford-blue': '#002b57',
-        'cyan-azure': '#4991ba',
+        'cyan-azure': '#00AEEF',
         'metallic-blue': '#205e8c',
         'dark-blue': '#051926',
         'blaze-orange': '#ff6801',

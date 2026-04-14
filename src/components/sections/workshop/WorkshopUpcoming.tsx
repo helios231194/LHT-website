@@ -84,14 +84,14 @@ export function WorkshopUpcoming() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#register" className="w-full sm:w-auto">
-                      <Button variant="primary" size="lg" className="h-14 px-8 font-bold w-full rounded-xl shadow-lg">
+                  <div className="flex flex-col xl:flex-row flex-wrap items-start sm:items-center gap-4">
+                    <a href="#register" className="w-full lg:w-auto">
+                      <Button variant="primary" size="lg" className="h-14 px-8 font-bold w-full rounded-xl shadow-lg whitespace-nowrap">
                         ĐĂNG KÝ THAM GIA MIỄN PHÍ
                       </Button>
                     </a>
-                    <a href="#content" className="w-full sm:w-auto">
-                      <Button variant="outline" size="lg" className="h-14 px-6 font-bold w-full rounded-xl border-slate-200 text-oxford-blue hover:border-cyan-azure flex items-center gap-2 group">
+                    <a href="#content" className="w-full lg:w-auto">
+                      <Button variant="outline" size="lg" className="h-14 px-6 font-bold w-full rounded-xl border-slate-200 text-oxford-blue hover:border-cyan-azure flex items-center justify-center gap-2 group whitespace-nowrap">
                         Xem nội dung buổi này
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Button>

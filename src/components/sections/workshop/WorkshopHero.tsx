@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export function WorkshopHero() {
   return (
-    <section className="relative bg-[#020D1A] text-white py-24 md:py-32 overflow-hidden flex items-center min-h-[85vh]">
+    <section className="relative bg-oxford-blue text-white py-24 md:py-32 overflow-hidden flex items-center min-h-[85vh]">
       {/* Dynamic Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-cyan-azure/20 blur-[150px] rounded-full mix-blend-screen" />

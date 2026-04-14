@@ -73,7 +73,7 @@ export function TrustBar() {
       <div className="relative mb-14">
         <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
-        <div className="flex items-center gap-12 animate-ticker whitespace-nowrap">
+        <div className="flex items-center gap-4 md:gap-12 animate-ticker whitespace-nowrap">
           {allLogos.map((logo, idx) => (
             <div
               key={idx}
