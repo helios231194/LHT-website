@@ -22,11 +22,11 @@ export function HomeHero() {
       className="text-[4rem] font-black leading-[1.35] text-white mb-6 animate-fadeSlideUp"
       style={{ animationDelay: '300ms', animationFillMode: 'both' }}
     >
-      Một quyết định
-      <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50] py-2">
+      Một quyết định{' '}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff9b50]">
         đúng thời điểm
       </span>
-      thay đổi cả năm vận hành.
+      <span className="block py-1">thay đổi cả năm vận hành.</span>
     </h1>
   );
 
@@ -91,10 +91,14 @@ export function HomeHero() {
           
           {/* Headline */}
           <h1 
-            className="text-[25px] sm:text-[32px] font-black leading-[1.2] text-white w-full max-w-lg mx-auto tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
+            className="text-[25px] sm:text-[32px] font-black leading-[1.35] text-white w-full max-w-lg mx-auto tracking-tight drop-shadow-md mb-6 animate-fadeSlideUp"
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
           >
-            Một quyết định <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm">đúng thời điểm</span> thay đổi cả năm vận hành.
+            Một quyết định{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blaze-orange to-[#ff4d00] drop-shadow-sm">
+              đúng thời điểm
+            </span>
+            <span className="block">thay đổi cả năm vận hành.</span>
           </h1>
 
           {/* CTA Buttons - Stacked & Rounded */}
